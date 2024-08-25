@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+<body>
+    <my-custom-element size="100"> 123</my-custom-element>
+</body>
+<script>
+
+class MyCustomElement extends HTMLElement {
+  static observedAttributes = ["size"];
+
+  constructor() {
+    super();
+  }
+
+  attributeChangedCallback(name, oldValue, newValue) {
+    console.log(
+      `Attribute ${name} has changed from ${oldValue} to ${newValue}.`,
+    );
+  }
+}
+
+customElements.define("my-custom-element", MyCustomElement);
+</script>
+</html>
