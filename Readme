@@ -1,0 +1,14 @@
+# Project Title
+- JWT Json Web Token and verify Roles with node js
+## Introduction
+- basic authentication hash password when create user and write file to create users Database 
+- technology used: express-> create server, cookieParser to use cookie middleware, 
+## Installation
+- cd node_jwt_verifyRoles
+- npm install
+- npm run dev
+## Usage
+- step 1 create user
+- step 2 login with basic authentication 
+- step 3 get resources user by get accessToken when we login and send it to verify jwt 
+- step 4 logout to remove accessToken and cookie
